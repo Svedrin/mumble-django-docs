@@ -10,8 +10,8 @@ In order to install Mumble-Django, you will need the following software. The
 Installation section will describe the setup in greater detail.
 
 * Murmur :)
-* A webserver that supports WSGI or FastCGI. The recommended option is Apache2
-  with mod_wsgi, how to configure this is described on the `Webserver Setup`_ page.
+* A web server that supports WSGI or FastCGI. The recommended option is Apache2
+  with mod_wsgi, how to configure this is described under :ref:`en_web_server_setup`.
 * `Django (at least 1.1.0) <http://www.djangoproject.com/download/>`_
 * `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
 * Python modules:
@@ -61,7 +61,9 @@ Debian Squeeze/Sid, Ubuntu Lucid Lynx
 Debian Lenny
 ------------
 
-* First of all, you need these packages: libapache2-mod-wsgi python-imaging python-simplejson
+* First of all, decide if you want to use Ice or DBus. On most installations,
+  you generally will want to use Ice.
+* You need these packages: libapache2-mod-wsgi python-imaging python-simplejson
 
  * If you want to use DBus: python-dbus
  * If you want to use Ice: python-zeroc-ice
@@ -69,8 +71,12 @@ Debian Lenny
 * Since v0.10, Mumble-Django requires Django 1.1 because the handling of
   the Admin URLs has changed. To install Django, simply run *easy_install django*.
 * To install django-registration, run *easy_install django_registration*.
-* Configure your Murmur to connect [[Connecting Murmur to DBus|to the System DBus]]
-  or [[Connecting_Murmur_to_ICE|to ICE]], whichever you prefer.
+* Murmur needs to be reachable over DBus or Ice. If you need further info on that,
+  see:
+
+ * :ref:`en_connecting_dbus`
+ * :ref:`en_connecting_ice`
+
 * Extract the mumble-django archive to wherever you like. This should be the path
   that you want it to live in, for example ``/srv/mumble-django``.
 * If you intend to use Ice, make sure the path to the Slice file configured in

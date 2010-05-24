@@ -27,6 +27,8 @@ Documentation contents
 
    features
    installation
+   connecting_murmur_to_dbus
+   connecting_murmur_to_ice
    web_server_setup
 
 Download, Source code

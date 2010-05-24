@@ -1,3 +1,8 @@
+.. _en_web_server_setup:
+
+Web Server setup
+================
+
 In order to run Django on a production webserver, you need to configure
 a few things. I have found using mod_wsgi with an Apache2 webserver to
 be most convenient, because it does not interfere with other scripting
