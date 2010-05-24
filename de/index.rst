@@ -21,7 +21,7 @@ hohes Potenzial für Erweiterungen und kann einfach in andere Django-Projekte
 integriert werden.
 
 Inhaltsverzeichnis
-----------------------
+------------------
 
 .. toctree::
    :maxdepth: 1
