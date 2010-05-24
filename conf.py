@@ -13,6 +13,11 @@
 
 import sys, os
 
+# Set import paths so autodoc can work
+sys.path.append( '/home/svedrin/mumble-django/hgrep' )
+sys.path.append( '/home/svedrin/mumble-django/hgrep/pyweb' )
+os.environ['DJANGO_SETTINGS_MODULE'] = 'pyweb.settings'
+
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
@@ -193,6 +198,9 @@ latex_documents = [
 # If false, no module index is generated.
 #latex_use_modindex = True
 
+intersphinx_mapping = {
+	'http://docs.python.org/': None,
+	'http://docs.djangoproject.com/en/dev': 'http://docs.djangoproject.com/en/dev/_objects',
+}
 
-# Example configuration for intersphinx: refer to the Python standard library.
-intersphinx_mapping = {'http://docs.python.org/': None}
+todo_include_todos = True
