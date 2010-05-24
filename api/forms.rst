@@ -6,7 +6,7 @@
 Forms
 =====
 
-.. autoclass:: mumble.forms
+.. automodule:: mumble.forms
    :members:
    :undoc-members:
 

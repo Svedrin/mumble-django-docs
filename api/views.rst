@@ -6,7 +6,7 @@
 Views
 =====
 
-.. autoclass:: mumble.views
+.. automodule:: mumble.views
    :members:
    :undoc-members:
 
