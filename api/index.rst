@@ -7,14 +7,12 @@ some way or another - or if you are just curious, of course :)
 
 Mumble-Django consists of two major parts:
 
-# The core Mumble application, that implements all the features
-# a Django project around the core app, that wraps up the Mumble app in a
-  project ready to be installed on a web server.
+#. The core Mumble application, that implements all the features
+#. a Django project around the core app, that wraps up the Mumble app in a
+   project ready to be installed on a web server.
 
-This documentation will mostly deal with the Mumble application.
-
-Contents
---------
+This documentation will mostly deal with the Mumble application, and covers
+the following sections:
 
 .. toctree::
    :maxdepth: 1
