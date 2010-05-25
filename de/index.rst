@@ -1,3 +1,5 @@
+.. _de_index:
+
 Mumble-Django: Ein Web-Interface für Mumble
 ===========================================
 
