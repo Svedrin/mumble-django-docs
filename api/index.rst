@@ -24,5 +24,5 @@ the following sections:
    views
    forms
    mctl
-   extdirect
+   djextdirect
 
