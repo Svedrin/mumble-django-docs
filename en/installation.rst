@@ -101,7 +101,7 @@ Debian Lenny
 
 * Now, the basic setup is complete. You can test Mumble-Django by running
   *python manage.py runserver 0.0.0.0:8000* and pointing your web browser
-  to *http:~//<your.address.example.com>:8000/*.
+  to *http://<your.address.example.com>:8000/*.
 * You should run *python manage.py checkenv* now. This script will check
   your environment for a few common mistakes. If any of the tests fails,
   you should fix the error you get before you continue.
