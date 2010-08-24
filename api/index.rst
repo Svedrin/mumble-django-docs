@@ -25,4 +25,5 @@ the following sections:
    forms
    mctl
    djextdirect
+   channelviewer
 
