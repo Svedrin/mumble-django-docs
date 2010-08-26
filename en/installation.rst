@@ -12,6 +12,7 @@ Installation section will describe the setup in greater detail.
 * Murmur :)
 * A web server that supports WSGI or FastCGI. The recommended option is Apache2
   with mod_wsgi, how to configure this is described under :ref:`en_web_server_setup`.
+* `Python (at least 2.5) <http://www.python.org>`_
 * `Django (at least 1.1.0) <http://www.djangoproject.com/download/>`_
 * `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
 * Python modules:
