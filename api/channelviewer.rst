@@ -54,6 +54,18 @@ a tab panel::
         }]
      });
 
+Demo
+----
+
+The channel viewer can be seen in action at http://viewer.shotgunfun.de/. You can enter
+arbitrary URLs to be queried, that way you can test this component against any Channel
+Viewer Protocol source you wish.
+
+Example URLs are:
+
+* http://shotgunfun.de/mumble/1.json (Default, Mumble-Django)
+* http://mumbleviewer.natenom.name/mumblereader/serverside/mumble.php?port=64738 (mumblereader)
+
 Resources
 ---------
 
