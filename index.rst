@@ -12,6 +12,8 @@ Documentation languages
 
    api/index
 
+.. seealso:: This documentation is also available `as a PDF file. <http://docs.mumble-django.org/Mumble-Django.pdf>`_
+
 Indices and tables
 ------------------
 
