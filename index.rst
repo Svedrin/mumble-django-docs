@@ -5,7 +5,7 @@ Documentation languages
 -----------------------
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    English <en/index>
    German (Deutsch) <de/index>
