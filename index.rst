@@ -1,8 +1,8 @@
 Mumble-Django: A Mumble web interface
 =====================================
 
-Documentation languages
------------------------
+Documentation index
+-------------------
 
 .. toctree::
    :maxdepth: 3
