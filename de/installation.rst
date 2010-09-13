@@ -14,7 +14,7 @@ beschrieben.
 * Ein Webserver mit Unterstützung für WSGI oder FastCGI. Empfohlen wird Apache2
   mit mod_wsgi, wie man das konfiguriert steht auf der Seite :ref:`de_web_server_setup`.
 * `Python (mindestens Version 2.5) <http://www.python.org>`_
-* `Django (mindestens Version 1.1.0) <http://www.djangoproject.com/download/>`_
+* `Django (mindestens Version 1.2.0) <http://www.djangoproject.com/download/>`_
 * `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
 * Python-Module:
 
