@@ -12,9 +12,13 @@ Wenn du Lighttpd benutzen willst, solltest du dir die Lighttpd-Sektion am Ende
 dieser Seite ansehen.
 
 .. note::
-   Bevor du anfängst, prüfe bitte ob die Datenbankdatei *mumble-django.db3*
-   für den Benutzer des Webservers schreibbar ist! Das bedeutet im Normalfall
-   dass du den Besitzer der Datei auf ``www-data`` oder ``httpd`` setzen musst.
+   Bevor du anfängst, prüfe bitte ob das Verzeichnis *db* (in dem die Datenbankdatei
+   *mumble-django.db3* liegt) für den Benutzer des Webservers schreibbar ist! Das
+   bedeutet im Normalfall dass du den Besitzer der Datei auf ``www-data`` oder
+   ``httpd`` setzen musst.
+
+   Es ist wichtig dass das *Verzeichnis* schreibbar sein muss, Apache muss darin
+   für sqlite eine weitere Datei zusätzlich zur Datenbank anlegen dürfen.
 
 Apache2
 =======

@@ -13,9 +13,13 @@ If you want to use Lighttpd, you should have a look at the lighttpd
 section at the end of this page.
 
 .. note::
-   Before you start, please do check that the database file *mumble-django.db3*
-   is writable for your web server's user! That usually means changing the
-   owner to a user like ``www-data`` or ``httpd``.
+   Before you start, please do check that the *db* directory (in which the
+   database file *mumble-django.db3* is located) is writable for your web
+   server's user! That usually means changing the owner to a user like
+   ``www-data`` or ``httpd``.
+
+   The *directory* needs to be writable because sqlite requires Apache to
+   be able to create a new file along the database file.
 
 
 Apache2
