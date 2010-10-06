@@ -130,6 +130,15 @@ by changing the owner of *mumble-django.db3* to *www-data* or granting
 *chmod a+w*. The latter one is a serious security issue and therefore
 discouraged, the recommended way is setting the owner correctly.
 
+401 Invalid Request
+-------------------
+
+If you get an error along the lines of "Your browser sent a request this server
+could not understand", please check if your web server has *mod_reqtimeout*
+enabled and disable it, as it has been known to cause problems sometimes. On
+Debian/Ubuntu systems, running ``a2dismod reqtimeout`` and ``/etc/init.d/apache2
+restart`` will fix this issue.
+
 Python Egg Cache
 ----------------
 
