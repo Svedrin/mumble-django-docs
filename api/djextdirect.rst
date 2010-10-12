@@ -12,6 +12,20 @@ for communications between the web site and the server.
 Provider
 --------
 
-.. autoclass:: djextdirect.Provider
+.. autoclass:: djextdirect.provider.Provider
+   :members:
+   :undoc-members:
+
+FormProvider
+------------
+
+.. autoclass:: djextdirect.formprovider.FormProvider
+   :members:
+   :undoc-members:
+
+Client
+------
+
+.. autoclass:: djextdirect.client.Client
    :members:
    :undoc-members:
