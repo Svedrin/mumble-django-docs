@@ -5,8 +5,22 @@ Mumble-Django includes a Channel Viewer which has been written completely in Jav
 using ExtJS components. That way, it can be embedded seemlessly in a website (that is,
 without using iframe fakery) and load its content in the background using AJAX.
 
-The source code for the channel viewer can be found here: 
+The source code for the channel viewer can be found here:
 http://bitbucket.org/Svedrin/mumble-django/src/tip/pyweb/mumble/media/js/channelviewer.js
+
+Inclusion via iframe
+--------------------
+
+Although the channel viewer protocol is designed to allow the channel viewer to be included
+directly on the web site, people tend to find it easier to include the channel viewer via
+an iframe. In order to make this easier, Mumble-Django can also output a page that contains
+only the viewer. This page can be retrieved using
+``http://demo.mumble-django.org/mumble-django/mumble/embed/<server_id>``
+as the iframe's target URL. That is, if
+``http://demo.mumble-django.org/mumble-django/mumble/1`` is the URL where you see your
+server's detail page,
+``http://demo.mumble-django.org/mumble-django/mumble/embed/1`` will give you the channel
+viewer only.
 
 Channel Viewer Protocol
 -----------------------
@@ -14,7 +28,7 @@ Channel Viewer Protocol
 The channel viewer expects to get its data in a JSON format which has been standardized
 as the `Channel Viewer Protocol <http://mumble.sourceforge.net/Channel_Viewer_Protocol>`_.
 This protocol is implemented by Mumble-Django, and can be queried using an URL like
-``http://demo.mumble-django.org/mumble-django/mumble/1.json``. That is, if 
+``http://demo.mumble-django.org/mumble-django/mumble/1.json``. That is, if
 ``http://demo.mumble-django.org/mumble-django/mumble/1`` is the URL where you see your
 server's detail page, simply append ``.json`` or ``.xml`` to retrieve the data in the
 standardized format.
@@ -64,7 +78,7 @@ Viewer Protocol source you wish.
 Example URLs are:
 
 * http://shotgunfun.de/mumble/1.json (Default, Mumble-Django)
-* http://mumbleviewer.natenom.name/mumblereader/serverside/mumble.php?port=64738 (mumblereader)
+* http://mvbackend.natenom.name/mumblereader/mumble.php?port=64738 (mumblereader)
 
 Resources
 ---------
