@@ -3,14 +3,14 @@
 Web Server setup
 ================
 
-In order to run Django on a production webserver, you need to configure
-a few things. I have found using mod_wsgi with an Apache2 webserver to
+In order to run Django on a production web server, you need to configure
+a few things. I have found using mod_wsgi with an Apache2 web server to
 be most convenient, because it does not interfere with other scripting
 laguages (as mod_python does, as far as I know), and you do not need to
 handle server processes as you would when using FastCGI.
 
-If you want to use Lighttpd, you should have a look at the lighttpd
-section at the end of this page.
+If you want to use Lighttpd, you should have a look at the :ref:`lighttpd
+section <en_web_server_lighttpd>` at the end of this page.
 
 .. note::
    Before you start, please do check that the *db* directory (in which the
@@ -26,7 +26,7 @@ Apache2
 =======
 
 To configure your apache2 server to use Django with WSGI, you need to
-install mod_wsgi (for Debian: apt-get install libapache2-mod-wsgi) and
+install mod_wsgi (for Debian: *apt-get install libapache2-mod-wsgi*) and
 create an Apache2 VHost that uses the WSGI config shipped with Mumble-Django.
 
 The WSGI config
@@ -48,7 +48,7 @@ Dedicated VirtualHost
 ~~~~~~~~~~~~~~~~~~~~~
 
 I am using the following config on my server (you can find this file shipped
-with Mumble-Django as `*etc/apache2/dedicated_vhost.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
+with Mumble-Django as `etc/apache2/dedicated_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
 
     <VirtualHost *:80>
 	ServerName		example.com
@@ -87,7 +87,7 @@ Shared VirtualHost
 
 If you want Mumble-Django to share another VirtualHost, you will need to merge
 the configuration from above with the other VirtualHost. Have a look at the file
-`*etc/apache2/shared_vhost.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
+`etc/apache2/shared_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
 that is shipped with Mumble-Django for an example how to do that.
 
 .. hint:: Don't forget to change the ``MUMBLE_DJANGO_URL`` setting in *pyweb/settings.py*!
@@ -95,11 +95,13 @@ that is shipped with Mumble-Django for an example how to do that.
 Reloading the server
 --------------------
 
-When you created this config file, enable it by running 
-*`a2ensite <http://manpages.ubuntu.com/manpages/jaunty/man8/a2ensite.8.html>`_ mumble-django*
+When you created this config file, enable it by running
+`a2ensite <http://manpages.ubuntu.com/manpages/jaunty/man8/a2ensite.8.html>`_ mumble-django
 and run */etc/init.d/apache2 reload* to enable the VHost. Then you can reach
 Mumble-Django by pointing your web browser to *http://example.com* or
 *http://www.example.com*.
+
+.. _en_web_server_lighttpd:
 
 lighttpd
 ========
@@ -107,7 +109,7 @@ lighttpd
 If you want to use Mumble-Django with lighttpd, you will have to set up FastCGI
 and configure your lighttpd to connect to it. An example config file which also
 explains how that can be done is shipped as
-`*etc/lighttpd/lighttpd.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
+`etc/lighttpd/lighttpd.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
 
 Troubleshooting
 ===============
@@ -136,8 +138,8 @@ discouraged, the recommended way is setting the owner correctly.
 If you get an error along the lines of "Your browser sent a request this server
 could not understand", please check if your web server has *mod_reqtimeout*
 enabled and disable it, as it has been known to cause problems sometimes. On
-Debian/Ubuntu systems, running ``a2dismod reqtimeout`` and ``/etc/init.d/apache2
-restart`` will fix this issue.
+Debian/Ubuntu systems, running *a2dismod reqtimeout* and */etc/init.d/apache2
+restart* will fix this issue.
 
 Python Egg Cache
 ----------------

@@ -8,7 +8,7 @@ konfiguriert werden. Ich empfehle Apache2 mit mod_wsgi, da dies nicht mit
 anderen Scriptsprachen interferiert und man sich nicht um Serverprozesse kümmern
 muss wie bei FastCGI.
 
-Wenn du Lighttpd benutzen willst, solltest du dir die Lighttpd-Sektion am Ende
+Wenn du Lighttpd benutzen willst, solltest du dir die :ref:`Lighttpd-Sektion <de_web_server_lighttpd>` am Ende
 dieser Seite ansehen.
 
 .. note::
@@ -23,8 +23,8 @@ dieser Seite ansehen.
 Apache2
 =======
 
-Für WSGI muss zuerst mod_wsgi installiert werden (Debian: apt-get install
-libapache2-mod-wsgi) und eine VHost-Konfiguration erstellt werden, die das
+Für WSGI muss zuerst mod_wsgi installiert werden (Debian: *apt-get install
+libapache2-mod-wsgi*) und eine VHost-Konfiguration erstellt werden, die das
 WSGI-Script einbindet welches bei Mumble-Django beiliegt.
 
 Das WSGI-Script
@@ -46,7 +46,7 @@ Eigener VirtualHost
 ~~~~~~~~~~~~~~~~~~~
 
 Ich benutze folgende Config auf meinem Server (diese Datei liegt Mumble-Django
-auch bei unter `*etc/apache2/dedicated_vhost.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
+auch bei unter `etc/apache2/dedicated_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
 
     <VirtualHost *:80>
 	ServerName		example.com
@@ -88,7 +88,7 @@ Existierenden VHost mitbenutzen
 Wenn du Mumble-Django in einen existierenden VirtualHost integrieren
 willst, musst du die obige Config mit der des anderen VHost zusammenführen.
 Für ein Beispiel wie das aussieht sieh dir die Datei
-`*etc/apache2/shared_vhost.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
+`etc/apache2/shared_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
 an, die mit Mumble-Django auch mitgeliefert wird.
 
 .. hint::
@@ -99,10 +99,12 @@ Die Apache-Konfiguration neu laden
 ----------------------------------
 
 Nachdem du die Datei erstellt hast, füge sie der Server-Konfiguration hinzu indem du
-*`a2ensite <http://manpages.ubuntu.com/manpages/jaunty/man8/a2ensite.8.html>`_ mumble-django*
-ausführst, und lade die Serverkonfiguration neu per */etc/init.d/apache2 reload*.
+`a2ensite <http://manpages.ubuntu.com/manpages/jaunty/man8/a2ensite.8.html>`_ mumble-django
+ausführst, und lade die Serverkonfiguration per */etc/init.d/apache2 reload* neu.
 Dann kannst du Mumble-Django erreichen, indem du *example.com* oder
 *www.example.com* ansurfst.
+
+.. _de_web_server_lighttpd:
 
 lighttpd
 ========
@@ -110,7 +112,7 @@ lighttpd
 Um Mumble-Django mit Lighttpd zu benutzen, musst du FastCGI aufsetzen und deinen
 Lighty so konfigurieren dass er darauf verbinden kann. Eine Beispiel-Config für
 Lighty mit einigen Erklärungen wie das geht liegt bei Mumble-Django bei, unter
-`*etc/lighttpd/lighttpd.conf* <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
+`etc/lighttpd/lighttpd.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
 
 Fehlerbehebung
 ==============
@@ -129,7 +131,7 @@ Trying to write to readonly database
 ------------------------------------
 
 Das bedeutet dass Apache die Datenbankdatei zwar zum Lesen öffnen konnte, aber
-nicht zum schreiben. Wie beim Verzeichnis auch kannst du das normalerweise beheben
+nicht zum Schreiben. Wie beim Verzeichnis auch kannst du das normalerweise beheben
 indem du den Besitzer der Datei *mumble-django.db3* auf ``www-data`` setzt, oder
 *chmod a+w* setzt. Letzteres ist allerdings eine ernste Sicherheitslücke, daher
 ist der empfohlene Weg den Besitzer richtig zu setzen.
@@ -141,7 +143,7 @@ Wenn du im Browser einen Fehler ähnlich wie "Your Browser sent a request this
 server could not understand" bekommst, sieh bitte nach ob dein Webserver das Modul
 *mod_reqtimeout* geladen hat und deaktiviere es gegebenenfalls, weil es gelegentlich
 dieses Problem verursacht. Auf Debian/Ubuntu-Systemen geht dies mit den Befehlen
-``a2dismod reqtimeout`` und ``/etc/init.d/apache2 restart``.
+*a2dismod reqtimeout* und */etc/init.d/apache2 restart*.
 
 Python Egg Cache
 ----------------

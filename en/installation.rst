@@ -12,14 +12,17 @@ Installation section will describe the setup in greater detail.
 * Murmur :)
 * A web server that supports WSGI or FastCGI. The recommended option is Apache2
   with mod_wsgi, how to configure this is described under :ref:`en_web_server_setup`.
+  (Note that the web server is the very last thing to configure, it is just listed
+  here because you will need one.)
 * `Python (at least 2.5) <http://www.python.org>`_
-* `Django (at least 1.2.0) <http://www.djangoproject.com/download/>`_
+* `Django (at least 1.2.3) <http://www.djangoproject.com/download/>`_
 * `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
 * Python modules:
 
  * PIL: Python Imaging Library (for user textures)
  * simplejson (for the user manager)
- * If using DBus:
+ * qrencode (only if you want `QR Codes <http://en.wikipedia.org/wiki/QR_Code>`_ to be shown for your servers)
+ * If using DBus (for Murmur older than 1.1.8):
 
   * DBus and python-dbus
   * Currently, all your Murmur servers must be on the System Dbus in order to be reachable
@@ -28,7 +31,7 @@ Installation section will describe the setup in greater detail.
   * Murmur and mumble-django need to run on the same machine as DBus does not support
     inter-machine connectivity.
 
- * If using ICE:
+ * If using Ice (recommended):
 
   * python-zeroc-ice
   * If you are using Ubuntu Hardy (8.04), you will likely experience issues with
@@ -38,48 +41,72 @@ Installation section will describe the setup in greater detail.
     If you want to know more, please see `issue 64 <http://bitbucket.org/Svedrin/mumble-django/issue/64/>`_.
 
 
-Debian Squeeze/Sid, Ubuntu Lucid Lynx
--------------------------------------
+Debian and Ubuntu Packages
+--------------------------
 
 * I am packaging Mumble-Django for Debian. To watch the status of the packages,
   check out `Debian's package tracker <http://packages.qa.debian.org/m/mumble-django.html>`_.
 * If packages are available for the Debian version you are using, just type
-  ``apt-get install mumble-django`` to install them.
-* The packages have mumble-server as a dependency, so make sure the installation
-  of that package doesn't break anything if you're using Murmur static.
-* Ubuntu has included my Debian packages in Lucid Lynx, so if you are using this
+  *apt-get install mumble-django* to install them.
+* The packages have the *mumble-server* package as a dependency, so make sure the installation
+  of that package doesn't break anything if you're using Murmur static. If it does, you should
+  go for the :ref:`manual installation <en_manual_install>`.
+* Ubuntu has included my Debian packages in Lucid Lynx, so if you are using this or any later
   Ubuntu version, Apt will be able to install MD as well.
 
   .. warning::
 
     The packages included in Ubuntu have an error in their configuration
-    file. This is because Ubuntu chose to ignore my update request and
+    file. This is because Ubuntu chose to ignore my update request and Lucid
     still ships with v1.1, which needs the slice version to be configured
     in *settings.py*, but failed to do so. The variable ``SLICE_VERSION``
     needs to be changed to ``(1, 2, 2)`` in */etc/mumble-django/settings.py*
     before Mumble-Django will work.
 
-Debian Lenny
-------------
+.. _en_manual_install:
+
+Manual Installation
+-------------------
 
 * First of all, decide if you want to use Ice or DBus. On most installations,
-  you generally will want to use Ice.
-* You need these packages: libapache2-mod-wsgi python-imaging python-simplejson
+  you will want to use Ice.
+* You need these packages: libapache2-mod-wsgi python-imaging python-simplejson mercurial
 
  * If you want to use DBus: python-dbus
  * If you want to use Ice: python-zeroc-ice
 
-* Since v0.10, Mumble-Django requires Django 1.1 because the handling of
-  the Admin URLs has changed. To install Django, simply run *easy_install django*.
-* To install django-registration, run *easy_install django_registration*.
+ So for using Ice, type *apt-get install libapache2-mod-wsgi python-imaging python-simplejson
+ mercurial python-zeroc-ice*.
+
+* Django is required in Version 1.2.3. To find out which version is packaged in your
+  distribution, type *apt-cache show python-django | grep Version*. If that version
+  is too old, you need to install Django using *easy_install django*, otherwise you
+  should install it using *apt-get install python-django*.
+
+  .. note::
+
+    If you receive the error ``easy_install: Command not found``, you need to install
+    the *python-setuptools* package.
+
+* The installation of django-registration depends on how you installed Django itself.
+  If you used *easy_install*, type *easy_install django_registration*, otherwise use
+  *apt-get install python-django-registration*.
 * Murmur needs to be reachable over DBus or Ice. If you need further info on that,
   see:
 
  * :ref:`en_connecting_dbus`
  * :ref:`en_connecting_ice`
 
-* Extract the mumble-django archive to wherever you like. This should be the path
-  that you want it to live in, for example ``/srv/mumble-django``.
+* Choose where to install mumble-django to. I recommend */srv/mumble-django*.
+* Go to the path where you want mumble-django to be installed, and then use Mercurial
+  to retrieve it:
+
+ * cd /srv
+ * hg clone http://bitbucket.org/Svedrin/mumble-django
+ * cd mumble-django
+ * hg update stable
+ * chown -R www-data:www-data /srv/mumble-django
+
 * If you intend to use Ice, make sure the path to the Slice file configured in
   *pyweb/settings.py* (``SLICE`` variable) points to the correct Murmur.ice file
   for your Murmur installation.
@@ -107,7 +134,7 @@ Debian Lenny
   your environment for a few common mistakes. If any of the tests fails,
   you should fix the error you get before you continue.
 * In order to run Mumble-Django on a production webserver like Apache2,
-  you can follow the [[Webserver Setup]] page.
+  you can follow the :ref:`en_web_server_setup` page.
 
 
 Other distributions
@@ -115,7 +142,7 @@ Other distributions
 
 Of course, Mumble-Django does not only run on Debian, but on all distros that
 can somehow handle the prerequisites. You just need to figure out how to install
-the Webserver, PIL and SimpleJSON; the rest of the howto for Debian Lenny should
+the Webserver, PIL and SimpleJSON; the rest of the Manual Installation howto should
 work for any other distro as well.
 
 
