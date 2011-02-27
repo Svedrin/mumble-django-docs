@@ -1,3 +1,5 @@
+.. _en_index:
+
 Mumble-Django: A Mumble web interface
 =====================================
 
@@ -6,6 +8,8 @@ Mumble-Django: A Mumble web interface
 .. seealso:: Programmers might want to take a look at the :ref:`api_index`
 
 .. seealso:: This documentation is also available `as a PDF file. <http://docs.mumble-django.org/Mumble-Django.pdf>`_
+
+.. seealso:: `There is a video tutorial showing the installation. <http://www.youtube.com/watch?v=vC2Cm09LP4k&hd=1>`_
 
 Murmur configuration, user registration and more
 ------------------------------------------------

@@ -3,6 +3,14 @@
 Mumble-Django: Ein Web-Interface für Mumble
 ===========================================
 
+.. seealso:: This documentation in English: :ref:`en_index`
+
+.. seealso:: Programmierer sollten sich die :ref:`api_index` ansehen.
+
+.. seealso:: Diese Dokumentation gibts auch `im PDF-Format. <http://docs.mumble-django.org/Mumble-Django.pdf>`_
+
+.. seealso:: `Auf YouTube gibts eine Videoanleitung für die Installation. <http://www.youtube.com/watch?v=vC2Cm09LP4k&hd=1>`_
+
 Murmur-Konfiguration, Registrierung und mehr
 --------------------------------------------
 
