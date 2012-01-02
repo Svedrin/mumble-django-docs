@@ -101,7 +101,7 @@ Es gibt verschiedene Möglichkeiten wie du bei der Entwicklung von Mumble-Django
 * Hilf mit die Dokumentation im Wiki aktuell zu halten.
 * Wenn du über längere Zeit an MD mitarbeiten willst, sprich einfach Svedrin in
   Freenode an. Hilfe ist immer willkommen. :)
-* Du kannst auch `etwas spenden <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJUEVMAGMAVWS>`_
+* Du kannst auch `etwas spenden <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK48YSHAUKWFG>`_
 
 Lizenz
 ------

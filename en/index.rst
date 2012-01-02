@@ -101,7 +101,7 @@ There are several ways you can help in the development of mumble-django:
 * If you miss a feature and you can add it, `submit a patch <http://bitbucket.org/Svedrin/mumble-django/issues/>`_.
 * Help maintaining the documentation in the Wiki.
 * If you want to join the team, just contact Svedrin on Freenode. Help is always welcome :)
-* `make a donation <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KJUEVMAGMAVWS>`_
+* `make a donation <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK48YSHAUKWFG>`_
 
 
 License
