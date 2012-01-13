@@ -29,9 +29,6 @@ offer. As a Django project, extending it or using it in other Django projects
 is very easy, so Mumble-Django is only at the beginning of its potential when
 you initially install it.
 
-Documentation contents
-----------------------
-
 .. toctree::
    :maxdepth: 1
 
