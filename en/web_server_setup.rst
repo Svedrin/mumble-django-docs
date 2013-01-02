@@ -54,13 +54,9 @@ with Mumble-Django as `etc/apache2/dedicated_vhost.conf <http://bitbucket.org/Sv
 	ServerName		example.com
 	ServerAlias		www.example.com
 	
+	Alias			/static/admin/	/usr/share/pyshared/django/contrib/admin/media/
 	Alias			/static/	/srv/mumble-django/htdocs/
-	
-	# for Debian squeeze(unstable)
-	Alias			/media/		/usr/share/pyshared/django/contrib/admin/media/
-	# if self-installed using setup.py
-	#Alias			/media/		/usr/lib/python2.4/site-packages/django/contrib/admin/media/
-	#Alias			/media/		/usr/lib/python2.5/site-packages/django/contrib/admin/media/
+	Alias			/mumble/media/	/srv/mumble-django/pyweb/mumble/media/
 	
 	WSGIScriptAlias		/		/srv/mumble-django/mumble-django.wsgi
 	WSGIDaemonProcess	mumble-django threads=25
