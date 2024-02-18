@@ -10,7 +10,8 @@ RUN wget -P /tmp/ 'https://github.com/Svedrin/mumble-django/archive/refs/heads/m
     unzip /tmp/master.zip -d / && \
     2to3 -w /mumble-django-master && \
     sed -i -e 's/file(/open(/g' /mumble-django-master/pyweb/settings.py && \
-    make html
+    make html && \
+    rm -rf /mumble-django-master
 
 RUN chown -R nginx: /src/_build/html
 
