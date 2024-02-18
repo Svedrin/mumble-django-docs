@@ -3,7 +3,9 @@
 Mumble-Django: Ein Web-Interface für Mumble
 ===========================================
 
-.. note:: Dieses Projekt wurde im Oktober 20215 eingestellt. Diese Dokumentation existiert vor Allem aus nostalgischen Gründen.
+.. note:: This project was discontinued in October 2015. The docs are here mostly for nostalgic reasons, and so that others can learn from it. `Source code is here <https://github.com/Svedrin/mumble-django>`_, `source code for the docs is here <https://github.com/Svedrin/mumble-django-docs>`_.
+
+.. note:: Dieses Projekt wurde im Oktober 20215 eingestellt. Diese Dokumentation existiert vor Allem aus nostalgischen Gründen, und damit andere von diesem Projekt lernen können. `Der Quellcode ist hier <https://github.com/Svedrin/mumble-django>`_, `source code for the docs is here <https://github.com/Svedrin/mumble-django-docs>`_.
 
 .. seealso:: This documentation in English: :ref:`en_index`
 
