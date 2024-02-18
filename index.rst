@@ -1,6 +1,8 @@
 Mumble-Django: A Mumble web interface
 =====================================
 
+.. note:: This project was discontinued in October 2015. The docs are here mostly for nostalgic reasons.
+
 Documentation index
 -------------------
 
@@ -11,8 +13,6 @@ Documentation index
    German (Deutsch) <de/index>
 
    api/index
-
-.. seealso:: This documentation is also available `as a PDF file. <http://docs.mumble-django.org/Mumble-Django.pdf>`_
 
 Indices and tables
 ------------------

@@ -6,7 +6,7 @@ using ExtJS components. That way, it can be embedded seemlessly in a website (th
 without using iframe fakery) and load its content in the background using AJAX.
 
 The source code for the channel viewer can be found here:
-http://bitbucket.org/Svedrin/mumble-django/src/tip/pyweb/mumble/media/js/channelviewer.js
+https://github.com/Svedrin/mumble-django/tree/master/pyweb/mumble/media/js/channelviewer.js
 
 Inclusion via iframe
 --------------------
@@ -26,7 +26,7 @@ Channel Viewer Protocol
 -----------------------
 
 The channel viewer expects to get its data in a JSON format which has been standardized
-as the `Channel Viewer Protocol <http://mumble.sourceforge.net/Channel_Viewer_Protocol>`_.
+as the `Channel Viewer Protocol <https://www.mumble.info/documentation/developer/channel-viewer-protocol>`_.
 This protocol is implemented by Mumble-Django, and can be queried using an URL like
 ``http://demo.mumble-django.org/mumble-django/mumble/1.json``. That is, if
 ``http://demo.mumble-django.org/mumble-django/mumble/1`` is the URL where you see your
@@ -67,18 +67,6 @@ a tab panel::
             html:  "Another tab"
         }]
      });
-
-Demo
-----
-
-The channel viewer can be seen in action at http://viewer.shotgunfun.de/. You can enter
-arbitrary URLs to be queried, that way you can test this component against any Channel
-Viewer Protocol source you wish.
-
-Example URLs are:
-
-* http://shotgunfun.de/mumble/1.json (Default, Mumble-Django)
-* http://mvbackend.natenom.name/mumblereader/mumble.php?port=64738 (mumblereader)
 
 Resources
 ---------

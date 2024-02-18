@@ -7,8 +7,7 @@ Features
 * can connect to both Murmur 1.1.8 and Murmur 1.2.0 at the same time, if using
   DBus for 1.1.8 and Ice for 1.2.0
 * Legacy support for Murmur 1.1.4 (Debian Lenny)
-* `Public channel list <http://cdn.bitbucket.org/Svedrin/mumble-django/downloads/channel_list.jpg>`_
-  for each configured server (`view the demo <http://shotgunfun.de/mumble/1/>`_)
+* Public channel list for each configured server
 
  * every channel is a link that will connect you directly to that channel
  * when clicking on a user name, you get a few details about this user
@@ -18,13 +17,11 @@ Features
 * Create and delete Mumur instances on as many Murmur installations as you want,
   they just need to be on the System DBus / ICE
 * Recognizes Cell phone browsers and serves them with a special, light-weight
-  version of the channel viewer page (`view the Demo <http://shotgunfun.de/mumble/mobile/1/>`_)
-* Fully supports the `Channel Viewer Protocol <http://mumble.sourceforge.net/Channel_Viewer_Protocol>`_
+  version of the channel viewer page
+* Fully supports the `Channel Viewer Protocol <https://www.mumble.info/documentation/developer/channel-viewer-protocol/>`_
 * Can be used as a data source for `Murmur-Manager's channel viewer <http://github.com/cheald/murmur-manager/tree/master/widget/>`_
-  (`view the Demo <http://viewer.shotgunfun.de/demo.html?id=1>`_)
 * Ships with a `Munin <http://munin.projects.linpro.no/>`_ plugin that graphs
   the user count for each registered server
-  (`view the Demo <http://munin.funzt-halt.net/funzt-halt.net/glint.funzt-halt.net-mumble_django.html>`_)
 * Edit the following configuration details in the `Admin Interface`_
   for a Murmur instance:
 
@@ -51,10 +48,9 @@ Features
 
 * "manage.py syncdb" recognizes existing Murmur instances and players and puts
   them into the DB
-* `Admin Interface <http://cdn.bitbucket.org/Svedrin/mumble-django/downloads/murmur_admin_website.jpg>`_
-  for server admins to configure basic settings
+* Admin Interface for server admins to configure basic settings
 * User manager for server admins: add/delete registrations, grant/revoke admin,
-  change password (`screenshot <http://bitbucket.org/Svedrin/mumble-django/wiki/murmur_usermanager.jpg>`_)
+  change password
 * handling user textures
 * an Ice connector to allow simple switching between DBus and Ice
 * Main template is a single file: if you don't like the look-and-feel, just

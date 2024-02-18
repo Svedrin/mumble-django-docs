@@ -7,9 +7,7 @@ Features
 * Kann sowohl Murmur 1.1.8 als auch 1.2.0 mit einer einzigen Installation
   verwalten, wenn DBus für 1.1.8 und Ice für 1.2.0 benutzt wird
 * Abwärtskompatibel zu Murmur 1.1.4
-* Erstellt automatisch eine
-  `Channel-Liste <http://cdn.bitbucket.org/Svedrin/mumble-django/downloads/channel_list.jpg>`_
-  für jeden konfigurierten Server (`Demo <http://shotgunfun.de/mumble/1/>`_)
+* Erstellt automatisch eine Channel-Liste für jeden konfigurierten Server
 
  * Jeder Channel ist verlinkt, mit einem Klick joinst du direkt in diesen Channel
  * Ein Klick auf einen Benutzernamen zeigt nähere Infos zu diesem Benutzer an
@@ -17,11 +15,11 @@ Features
  * leere Subchannels werden ausgeblendet um die Liste übersichtlich zu halten (etwa so wie in Mumble selbst)
 
 * Erkennt Handy-Browser und liefert diesen eine speziell zugeschnittene Version
-  der Seite (`Demo <http://shotgunfun.de/mumble/mobile/1/>`_)
-* Unterstützt das `Channel-Viewer-Protocol <http://mumble.sourceforge.net/Channel_Viewer_Protocol>`_
+  der Seite
+* Unterstützt das `Channel-Viewer-Protocol <https://www.mumble.info/documentation/developer/channel-viewer-protocol/>`_
 * Kann als Datenquelle für den
   `Channel-Viewer von Murmur-Manager <http://github.com/cheald/murmur-manager/tree/master/widget/>`_
-  dienen (`Demo <http://viewer.shotgunfun.de/demo.html?id=1>`_)
+  dienen
 * Das mitgelieferte `Munin <http://munin.projects.linpro.no/>`_-Plugin zeichnet
   einen Graphen über die Anzahl der Benutzer auf jedem Server
   (`Demo <http://munin.funzt-halt.net/funzt-halt.net/glint.funzt-halt.net-mumble_django.html>`_)
@@ -54,11 +52,9 @@ Features
 
 * "manage.py syncdb" erkennt existierende Murmur-Instanzen und Benutzer und
   trägt diese in die DB ein
-* `Admin Interface <http://cdn.bitbucket.org/Svedrin/mumble-django/downloads/murmur_admin_website.jpg>`_
-  für Mitglieder der *admin*-Gruppe
+* Admin Interface für Mitglieder der *admin*-Gruppe
 * Benutzerverwaltung für Serveradmins: erstellt/löscht Registrierungen, vergibt
   Adminrechte, ändert Benutzerpasswörter
-  (`Screenshot <http://bitbucket.org/Svedrin/mumble-django/wiki/murmur_usermanager.jpg>`_)
 * Benutzertexturen einstellen
 * Connector-Module um einfach zwischen DBus und Ice umzuschalten
 * Das Template ist eine einzige Datei: Wenn's dir nicht gefällt, ändere einfach

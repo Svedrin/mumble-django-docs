@@ -3,11 +3,11 @@
 Mumble-Django: A Mumble web interface
 =====================================
 
+.. note:: This project was discontinued in October 2015. The docs are here mostly for nostalgic reasons.
+
 .. seealso:: Diese Dokumentation gibt's auch auf Deutsch: :ref:`de_index`
 
 .. seealso:: Programmers might want to take a look at the :ref:`api_index`
-
-.. seealso:: This documentation is also available `as a PDF file. <http://docs.mumble-django.org/Mumble-Django.pdf>`_
 
 .. seealso:: `There is a video tutorial showing the installation. <http://www.youtube.com/watch?v=vC2Cm09LP4k&hd=1>`_
 
@@ -42,63 +42,16 @@ Download, Source code
 ---------------------
 
 You can find zip or gz packages for all versions
-`on the Downloads page <http://bitbucket.org/Svedrin/mumble-django/downloads>`_.
+`on the Downloads page <https://github.com/Svedrin/mumble-django/tags>`_.
 As Mumble-Django is written in Python, there is no destinction between source
 and binary packages.
 
 The latest development version is always available in the *tip* package.
 
-Demo installation
------------------
-
-The demo installation is running here: http://demo.mumble-django.org/mumble-django/
-
-This installation is based on Debian Testing.
-
-
 Prerequisites, Installation
 ---------------------------
 
 Please see the :ref:`en_installation` page for more information about what's needed and how to install Mumble-Django.
-
-
-Known Issues
-------------
-
-For a list of known bugs, please see the `Issues <http://bitbucket.org/Svedrin/mumble-django/issues/>`_ page. If you find a bug or would like to request a feature, this is also the place to go. Please feel free to open a ticket whenever you like!
-
-
-Contact
--------
-
-If you need help (or anything else), you can contact me via IRC (Svedrin in
-#mumble on Freenode) or Jabber (ich@svedr.in).
-
-You might want to `follow me on Twitter <http://twitter.com/just_svedrin>`_, and
-I always use the `#mumbledjango <http://twitter.com/#search?q=%23mumbledjango>`_
-hashtag for tweets concerning the project. This way, you can easily get the
-latest news!
-
-
-Further documentation
----------------------
-
-SourceArchive.com seems to generate an API documentation using DoxyGen, which can be found under
-http://mumble-django.sourcearchive.com/versions/main.html.
-
-
-Get involved
-------------
-
-There are several ways you can help in the development of mumble-django:
-
-* Write or maintain a Translation.
-* Test new versions before they are released.
-* `Submit bug reports <http://bitbucket.org/Svedrin/mumble-django/issues/>`_ if you find an error.
-* If you miss a feature and you can add it, `submit a patch <http://bitbucket.org/Svedrin/mumble-django/issues/>`_.
-* Help maintaining the documentation in the Wiki.
-* If you want to join the team, just contact Svedrin on Freenode. Help is always welcome :)
-* `make a donation <https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=PK48YSHAUKWFG>`_
 
 
 License

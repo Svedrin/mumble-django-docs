@@ -16,7 +16,7 @@ Installation section will describe the setup in greater detail.
   here because you will need one.)
 * `Python (at least 2.5) <http://www.python.org>`_
 * `Django (at least 1.2.3) <http://www.djangoproject.com/download/>`_
-* `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
+* `django-registration <https://github.com/ubernostrum/django-registration>`_
 * Python modules:
 
  * PIL: Python Imaging Library (for user textures)
@@ -38,7 +38,6 @@ Installation section will describe the setup in greater detail.
     Ice as python-zeroc-ice is incompatible to Python 2.5 in Hardy. I have prepared
     fixed Packages in `my PPA on Launchpad <https://launchpad.net/~svedrin/+archive/misc>`_,
     please consider updating to these packages if you intend to use Ice on Hardy.
-    If you want to know more, please see `issue 64 <http://bitbucket.org/Svedrin/mumble-django/issue/64/>`_.
 
 
 Debian and Ubuntu Packages
@@ -98,13 +97,12 @@ Manual Installation
  * :ref:`en_connecting_ice`
 
 * Choose where to install mumble-django to. I recommend */srv/mumble-django*.
-* Go to the path where you want mumble-django to be installed, and then use Mercurial
+* Go to the path where you want mumble-django to be installed, and then use Git
   to retrieve it:
 
  * cd /srv
- * hg clone http://bitbucket.org/Svedrin/mumble-django
+ * git clone http://github.com/Svedrin/mumble-django.git
  * cd mumble-django
- * hg update stable
  * chown -R www-data:www-data /srv/mumble-django
 
 * If you intend to use Ice, make sure the path to the Slice file configured in

@@ -46,7 +46,7 @@ Eigener VirtualHost
 ~~~~~~~~~~~~~~~~~~~
 
 Ich benutze folgende Config auf meinem Server (diese Datei liegt Mumble-Django
-auch bei unter `etc/apache2/dedicated_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
+auch bei unter `etc/apache2/dedicated_vhost.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/apache2/dedicated_vhost.conf>`_)::
 
     <VirtualHost *:80>
 	ServerName		example.com
@@ -84,7 +84,7 @@ Existierenden VHost mitbenutzen
 Wenn du Mumble-Django in einen existierenden VirtualHost integrieren
 willst, musst du die obige Config mit der des anderen VHost zusammenführen.
 Für ein Beispiel wie das aussieht sieh dir die Datei
-`etc/apache2/shared_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
+`etc/apache2/shared_vhost.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/apache2/shared_vhost.conf>`_
 an, die mit Mumble-Django auch mitgeliefert wird.
 
 .. hint::
@@ -108,7 +108,7 @@ lighttpd
 Um Mumble-Django mit Lighttpd zu benutzen, musst du FastCGI aufsetzen und deinen
 Lighty so konfigurieren dass er darauf verbinden kann. Eine Beispiel-Config für
 Lighty mit einigen Erklärungen wie das geht liegt bei Mumble-Django bei, unter
-`etc/lighttpd/lighttpd.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
+`etc/lighttpd/lighttpd.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/lighttpd/lighttpd.conf>`_.
 
 Fehlerbehebung
 ==============

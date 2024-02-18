@@ -48,7 +48,7 @@ Dedicated VirtualHost
 ~~~~~~~~~~~~~~~~~~~~~
 
 I am using the following config on my server (you can find this file shipped
-with Mumble-Django as `etc/apache2/dedicated_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/dedicated_vhost.conf>`_)::
+with Mumble-Django as `etc/apache2/dedicated_vhost.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/apache2/dedicated_vhost.conf>`_)::
 
     <VirtualHost *:80>
 	ServerName		example.com
@@ -83,7 +83,7 @@ Shared VirtualHost
 
 If you want Mumble-Django to share another VirtualHost, you will need to merge
 the configuration from above with the other VirtualHost. Have a look at the file
-`etc/apache2/shared_vhost.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/apache2/shared_vhost.conf>`_
+`etc/apache2/shared_vhost.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/apache2/shared_vhost.conf>`_
 that is shipped with Mumble-Django for an example how to do that.
 
 .. hint:: Don't forget to change the ``MUMBLE_DJANGO_URL`` setting in *pyweb/settings.py*!
@@ -105,7 +105,7 @@ lighttpd
 If you want to use Mumble-Django with lighttpd, you will have to set up FastCGI
 and configure your lighttpd to connect to it. An example config file which also
 explains how that can be done is shipped as
-`etc/lighttpd/lighttpd.conf <http://bitbucket.org/Svedrin/mumble-django/src/tip/etc/lighttpd/lighttpd.conf>`_.
+`etc/lighttpd/lighttpd.conf <https://github.com/Svedrin/mumble-django/tree/master/etc/lighttpd/lighttpd.conf>`_.
 
 Troubleshooting
 ===============

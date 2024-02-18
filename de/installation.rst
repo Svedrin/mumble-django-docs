@@ -17,7 +17,7 @@ beschrieben.
   weil du einen brauchen wirst.)
 * `Python (mindestens Version 2.5) <http://www.python.org>`_
 * `Django (mindestens Version 1.2.3) <http://www.djangoproject.com/download/>`_
-* `django-registration <http://bitbucket.org/ubernostrum/django-registration/wiki/Home>`_
+* `django-registration <http://github.com/ubernostrum/django-registration/>`_
 * Python-Module:
 
  * PIL: Python Imaging Library (benötigt für Benutzertexturen)
@@ -38,8 +38,7 @@ beschrieben.
     nicht kompatibel ist. Ich habe kompatible Pakete in
     `meinem PPA auf Launchpad <https://launchpad.net/~svedrin/+archive/misc>`_
     bereitgestellt, bitte überlege auf diese Pakete zu aktualisieren wenn du
-    Ice benutzen willst. Wenn du mehr wissen willst, sieh dir bitte den Thread
-    zu `issue 64 <http://bitbucket.org/Svedrin/mumble-django/issue/64/>`_ an.
+    Ice benutzen willst.
 
 Debian- bzw. Ubuntu-Pakete
 --------------------------
@@ -101,9 +100,8 @@ Manuelle Installation
   herunterzuladen:
 
  * cd /srv
- * hg clone http://bitbucket.org/Svedrin/mumble-django
+ * git clone http://github.com/Svedrin/mumble-django.git
  * cd mumble-django
- * hg update stable
  * chown -R www-data:www-data /srv/mumble-django
 
 * Falls du Ice benutzen willst, sieh in *pyweb/settings.py* nach ob der
