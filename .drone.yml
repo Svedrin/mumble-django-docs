@@ -1,0 +1,26 @@
+---
+kind: pipeline
+name: tests
+
+platform:
+  arch: amd64
+  os: linux
+
+steps:
+- name: build docs
+  image: plugins/docker
+  settings:
+    repo: docker.funzt-halt.net/mumble-django-docs
+    tags: latest
+    cache_from: docker.funzt-halt.net/mumble-django-docs:latest
+    mirror: http://192.168.43.21:5000/
+  when:
+    branch: master
+    event:
+      exclude:
+      - pull_request
+---
+kind: signature
+hmac: 74df0669a8a74f2f487987fac44eb021ea99ea53325813edb9786f7a240546f3
+
+...
