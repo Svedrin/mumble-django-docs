@@ -14,8 +14,8 @@
 import sys, os
 
 # Set import paths so autodoc can work
-sys.path.append( '/home/svedrin/mumble-django/hgrep' )
-sys.path.append( '/home/svedrin/mumble-django/hgrep/pyweb' )
+sys.path.append( '/mumble-django-master' )
+sys.path.append( '/mumble-django-master/pyweb' )
 os.environ['DJANGO_SETTINGS_MODULE'] = 'pyweb.settings'
 
 # If extensions (or modules to document with autodoc) are in another directory,
